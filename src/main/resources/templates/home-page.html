@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<meta charset="UTF-8">
+<title>Livraria Novo Olhar</title>
+    <!-- Bootstrap core CSS -->
+<link href="/css/bootstrap.min.css" rel="stylesheet">
+<link href="/css/bootstrap.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+      
+     
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="/css/navbar.css" rel="stylesheet">
+    <link href="/css/carousel.css" rel="stylesheet">
+    
+    <!-- Meu estilo -->
+    <link href="/css/meuestilo.css" rel="stylesheet">
+      
+</head>
+<body>
+<header>
+ <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Tenth navbar example">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample08" aria-controls="navbarsExample08" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+		  <img class="logo-livraria" src="/images/logo-livrarianovo.png" height="60px" width="60px"/>
+		  <h4>Livraria Novo Olhar</h4>
+      <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample08">
+      
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" aria-current="page" href="/home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+           <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdown08" data-bs-toggle="dropdown" aria-expanded="false">Logins</a>
+            <ul class="dropdown-menu" aria-labelledby="dropdown08">
+              <li><a class="dropdown-item" href="#">Clientes</a></li>
+              <li><a class="dropdown-item" href="#">Funcionários</a></li>
+          
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdown08" data-bs-toggle="dropdown" aria-expanded="false">Seções</a>
+            <ul class="dropdown-menu" aria-labelledby="dropdown08">
+              <li><a class="dropdown-item" href="#">Ação</a></li>
+              <li><a class="dropdown-item" href="#">Romance</a></li>
+              <li><a class="dropdown-item" href="#">Suspense</a></li>
+              <li><a class="dropdown-item" href="#">Auto-ajuda</a></li>
+              <li><a class="dropdown-item" href="#">Infantil</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>  
+ <!-- ---------------------------CAROUSEL----------------------------- -->
+    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></li>
+      <li data-bs-target="#myCarousel" data-bs-slide-to="1"></li>
+      <li data-bs-target="#myCarousel" data-bs-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
+		<img src="/images/livraria4.jpg"/>
+        <div class="container">
+          <div class="carousel-caption text-start">
+            <h1>Sempre uma nova leitura</h1>
+            <p>A livraria novo olhar conta com um acervo atualizado.</p>
+            <p><a class="btn btn-lg btn-primary" href="#" role="button">Ver mais</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
+		<img src="/images/livraria1.jpg"/>
+        <div class="container">
+          <div class="carousel-caption">
+            <h1>Pensando em todos</h1>
+            <p>Livros para todos os gostos e objetivos, confira abaixo.</p>
+            <p><a class="btn btn-lg btn-primary" href="#" role="button">Ver mais</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
+		<img src="/images/livraria3.jpg"/>
+        <div class="container">
+          <div class="carousel-caption text-end">
+            <h1>Cadastre-se</h1>
+            <p>É simples, rápido e ainda passamos newsletters em seu e-mail com nossas novidades.</p>
+            <p><a class="btn btn-lg btn-primary" href="#" role="button">Cadastrar</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#myCarousel" role="button" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Anterior</span>
+    </a>
+    <a class="carousel-control-next" href="#myCarousel" role="button" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Próximo</span>
+    </a>
+  </div>
+  
+  <!-- -----------------------MARKETING------------------------- -->
+   <div class="container marketing">
+  <hr class="featurette-divider" style="background-color: white;">
+
+    <div class="row featurette">
+      <div class="col-md-5">
+        <h2 class="featurette-heading" style="color: white;">Conheça nossos livros! <span class="text-muted" >Mude sua mente.</span></h2>
+        <p class="lead">A livraria novo olhar oferece aos seus clientes uma diversidade de conteúdo. Em um ambiente relaxante e agradável e se ler.</p>
+      </div>
+      <div class="col-md-5">
+		<img src="/images/marketing2.PNG"/>
+      </div>
+    </div>
+
+    <hr class="featurette-divider" style="background-color: white;">
+
+    <div class="row featurette">
+      <div class="col-md-5 order-md-2">
+        <h2 class="featurette-heading" style="color: white;">Conheça nossos livros! <span class="text-muted">See for yourself.</span></h2>
+        <p class="lead">A livraria novo olhar oferece aos seus clientes uma diversidade de conteúdo. Em um ambiente relaxante e agradável e se ler.</p>
+      </div>
+      <div class="col-md-5 order-md-1">
+         <img src="/images/marketing1.PNG"/>
+      </div>
+    </div>
+  </div>
+  <hr class="featurette-divider" style="background-color: white;">
+  <!-- --------------------LIVROS---------------------------- -->
+  	<article class="my-3" id="card">
+      <div class="bd-heading sticky-md-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+        <h3 class="h3colecao">Nossa coleção!</h3>
+      </div>
+		<br>
+      <div>
+        <div class="bd-example">
+        <div class="row  row-cols-1 row-cols-sm-2 g-4 estilocard">     
+          <div class="col ">
+            <div class="card">
+              <div class="row g-0">
+                <div class="col-sm-4">
+					<img src="/images/capa-livro2.PNG" width="195" height="250"/>
+                </div>
+                <div class="col-sm-6 ">
+                  <div class="card-body" th:each="livro: ${livros}">
+                  	<h5 class="card-title">Título</h5>
+                  		<p th:text="${livro.titulo}"></p>
+                  	<h5 class="card-title">Autor</h5>
+                  		<p th:text="${livro.autor}"></p>
+                    <h5 class="card-title">Preço</h5>
+                    <p th:text="${livro.preco}"></p>
+                    <p class="card-text">Conta sobre a vida e seus mistérios.</p>
+                 
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+           <div class="col">
+            <div class="card">
+              <div class="row g-0">
+                <div class="col-sm-4">
+					<img src="/images/capa-livro1.PNG" width="195" height="250"/>
+                </div>
+                <div class="col-sm-6">
+                  <div class="card-body" th:each="livro: ${livros}">
+                  	<h5 class="card-title">Título</h5>
+                  		<p th:text="${livro.titulo}"></p>
+                  	<h5 class="card-title">Autor</h5>
+                  		<p th:text="${livro.autor}"></p>
+                    <h5 class="card-title">Preço</h5>
+                    <p th:text="${livro.preco}"></p>
+                    <p class="card-text">Conta sobre a vida e seus mistérios.</p>
+                 
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+ 
+        </div>
+        </div>
+      </div>
+    </article>
+ 
+  <div class="container">
+  	<div class="card"><h3>Confira nossos sucessos</h3>
+  		<table>
+  			<thead>
+  				 <tr class="table100-head">
+  				 		<th class="column1"><span></span></th>
+						<th class="column2"><span>Título</span></th>
+						<th class="column3"><span>Autor</span></th>
+						<th class="column5"><span>Preço</span></th>
+						<th class="column5"><span>Adicionar ao carrinho</span></th>
+					  </tr>
+  			</thead>
+  			<tr th:each="livro: ${livros}">
+  				<td><img src="/images/capa-livro2.PNG" width="90" height="150"/></td>
+				<td th:text="${livro.titulo}" class="column2"></td>
+				<td th:text="${livro.autor}" class="column3"></td>
+				<td th:text="${livro.preco}" class="column5 js-decimal"></td>
+				<td class="column6"><a class="button green" ><span><i class="fa fa-edit"></i></span></a></td>
+			</tr>
+		</table>
+  </div>
+  </div>
+  <!-- -------------SCRIPTS----- -->
+     <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+     <script src="js/utilidades.js"></script>
+</body>
+</html>

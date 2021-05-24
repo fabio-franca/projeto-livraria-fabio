@@ -1,0 +1,70 @@
+<!DOCTYPE>
+<html lang="pt" xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+layout:decorate="~{fragments/layout}">
+<head></head>
+
+<body class="sb-nav-fixed">
+        
+		<section  layout:fragment="corpo">
+                    <div class="container-fluid px-4">
+                        <h1 class="mt-4">TESTE(NÃO CONSIDERAR ESTE CADASTRO)</h1>
+                        
+                        
+                       <form action="#"	 th:action="@{/salvarFuncionario}" th:object="${funcionarios}" method="post" class="form-vertical">                     
+                    
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <i class="fas fa-table me-1"></i>
+                               		TESTE DO FRAGMENT
+                            </div>
+                            <div class="card-body">
+                           
+					        <!-- Mensagem de sucesso -->
+								<div class="alert alert-success alert-dismissible" role="alert" th:if="${not #strings.isEmpty(mensagem)}">
+									<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="close"></button>
+										<span th:text="${mensagem}"></span>
+								</div>
+								
+								
+								<!-- LINHAS -->								
+                                <div class="row">
+									<div class="form-group col-sm-5">
+										<label class="control-label">Nome</label>
+										<input type="text" class="form-control" id="nome"  autofocus="autofocus"/>
+									</div>
+									<div class="form-group col-sm-5" >
+										<label class="control-label">E-mail</label>
+										<input type="text" class="form-control" id="email" />
+									</div>
+								</div>
+									<div class="row">
+										<div class="form-group col-sm-5" >
+											<label class="control-label">Nascimento</label>
+											<input type="date" class="form-control" id="nascimento" >
+										</div>
+										<div class="form-group col-sm-5">
+											<label for="cargo" class="control-label">Cargo</label>
+											<select id="cargo" class="form-control" data-style="btn btn-link" >
+												<option value="">Selecione o cargo</option>
+												
+											</select>
+					 					</div>
+									</div>
+									<hr>
+										<div class="row">
+											<div class="form-group col-sm-1">
+												<button type="submit" class="btn  btn-primary">Salvar</button>
+											</div>
+										<div class="form-group col-sm-2">
+											<a href="/funcionarios/listar"><button type="button" class="btn  btn-secondary">Cancelar</button></a>
+										</div>
+									</div>
+                            </div>
+                        </div>
+                        </form>
+                    </div>
+               </section>	
+    </body>
+</html>
