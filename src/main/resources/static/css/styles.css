@@ -561,6 +561,7 @@ progress {
   margin-bottom: 1rem;
   font-size: 0.875em;
   color: #6c757d;
+ 
 }
 .blockquote-footer::before {
   content: "— ";
@@ -6376,7 +6377,7 @@ textarea.form-control-lg {
 }
 
 .d-flex {
-  display: flex !important;
+  display: flex !important;    /*****************MODIFICAÇÃO FÁBIO**************/
 }
 
 .d-inline-flex {
@@ -7127,6 +7128,7 @@ textarea.form-control-lg {
 .py-4 {
   padding-top: 1.5rem !important;
   padding-bottom: 1.5rem !important;
+  
 }
 
 .py-5 {
@@ -11038,7 +11040,7 @@ body {
   margin-left: 1.5rem;
   flex-direction: column;
 }
-.sb-sidenav .sb-sidenav-footer {
+.sb-sidenav .sb-sidenav-footer {	
   padding: 0.75rem;
   flex-shrink: 0;
 }
