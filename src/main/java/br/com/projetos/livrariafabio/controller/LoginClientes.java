@@ -4,11 +4,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-public class LoginFuncionarios {
+public class LoginClientes {
 
-	@RequestMapping("/loginFuncionario")
+	@RequestMapping("/loginClientes")
 	public String acessar() {
-		return "/logins/loginFuncionarios";
+		return "/logins/loginClientes";
 	}
 	
 }

@@ -28,6 +28,10 @@ public class Clientes implements Serializable {
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private LocalDate nascimento;
 	
+	private String usuario;
+	
+	private String senha;
+	
 
 	public Long getId() {
 		return id;
@@ -68,6 +72,23 @@ public class Clientes implements Serializable {
 	public void setNascimento(LocalDate nascimento) {
 		this.nascimento = nascimento;
 	}
+
+	public String getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(String usuario) {
+		this.usuario = usuario;
+	}
+
+	public String getSenha() {
+		return senha;
+	}
+
+	public void setSenha(String senha) {
+		this.senha = senha;
+	}
+	
 	
 	
 	

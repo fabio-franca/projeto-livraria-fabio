@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Login - Livraria Novo Olhar</title>
+        <link href="/css/styles.css" rel="stylesheet" />
+        <link href="/css/meuestilo.css" rel="stylesheet"/>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
+    </head>
+    <body class="bg-primary">
+        <div id="layoutAuthentication">
+            <div id="layoutAuthentication_content">
+                <main>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-7">
+                                <div class="card shadow-lg border-0 rounded-lg mt-5">
+                                    <div class="card-header"><h3 class="text-center font-weight-light my-4">Criar conta do Cliente</h3></div>
+                                    <div class="card-body">
+                                        <form  action="#" th:action="@{/salvarCliente}" th:object="${clientes}" method="post" >
+                                            <div class="row mb-3">
+                                                <div class="col-md-6">
+                                                    <div class="form-group mb-3 mb-md-0">
+                                                   		 <label for="nome">Nome</label>	
+                                                        <input class="form-control" id="nome" type="text" th:field="*{nome}"/>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group mb-3 mb-md-0">
+                                                   		 <label for="email">E-mail</label>	
+                                                        <input class="form-control" id="email" type="text" th:field="*{email}"/>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row mb-3">
+                                                <div class="col-md-6">
+                                              	   <div class="form-group mb-3 mb-md-0">
+                                              		   <label for="telefone">Telefone</label>
+                                                        <input class="form-control" id="telefone" type="text" th:field="*{telefone}"/>
+                                                    </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                    <div class="form-group mb-3 mb-md-0">
+                                                   		 <label for="nascimento">Nascimento</label>	
+                                                        <input class="form-control" id="nascimento" type="date" th:field="*{nascimento}"/>
+                                                    </div>
+                                                	</div>
+                                               </div>
+                                                <div class="row mb-3">
+                                               		<div class="col-md-6">
+	                                                    <div class="form-group mb-3 mb-md-0">
+	                                                   		 <label for="usuario">Usuário</label>
+	                                                        <input class="form-control" id="usuario" type="text" th:field="*{usuario}"/> 
+	                                                    </div>
+	                                                 </div>
+	                                                 <div class="col-md-6">
+	                                                    <div class="form-group mb-3 mb-md-0">
+	                                                	    <label for="senha">Senha</label>
+	                                                        <input class="form-control" id="senha" type="password" th:field="*{senha}"/>
+	                                                    </div>
+                                               		 </div>
+                                            </div>
+                                            <div class="mt-4 mb-0">
+                                                <div class="d-grid"><a class="btn btn-primary btn-block"><button type="submit" class="btn  btn-primary">Salvar</button></a></div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="card-footer text-center py-3">
+                                        <div class="small"><a href="/loginClientes">Já tem uma conta? Vamos ao login</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+            <div id="layoutAuthentication_footer">
+			<footer class="py-4 bg-light mt-auto">
+				<div class="container-fluid px-4">
+					<div class="d-flex align-items-right right-content-between small">
+						<div class="text-muted">Redes Sociais</div>
+						<ul>
+							<li class="redes_sociais"><a
+								href="https://www.facebook.com/" title="Facebook"><img
+									src="/images/logo-facebook.PNG" /></a></li>
+							<li class="redes_sociais"><a href="https://www.youtube.com/"
+								title="Youtube"><img src="/images/logo-youtube.PNG" /></a></li>
+							<li class="redes_sociais"><a href="https://www.twitter.com/"
+								title="Twitter"><img src="/images/logo-twitter.PNG" /></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="container-fluid px-4">
+					<div
+						class="d-flex align-items-center justify-content-between small">
+						<div class="text-muted">Livraria Novo Olhar - 2021. Todos os
+							direitos reservados</div>
+						<div class="text-muted">
+							<p>E-mail: livrarianovoolhar@livraria.com.br</p>
+						</div>
+						<div class="text-muted">
+							<p>Contato: (85) 99999-9999</p>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="/js/scripts.js"></script>
+    </body>
+</html>

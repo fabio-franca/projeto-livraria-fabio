@@ -13,3 +13,19 @@
 .redes_sociais {
 	display: inline-block;
 }
+
+#card-livros{
+	width: auto;
+	height: auto;
+	left: 50%;
+	right: 50%;
+	margin-left: auto;
+    margin-right: auto;
+}
+
+#col-especial {
+	margin: 1px;
+	margin-left: 10px;
+	color: #03c5e7;
+
+}

@@ -6,8 +6,8 @@
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title>Livraria Novo Olhar</title>
-
         <link href="/css/styles.css" rel="stylesheet" />
+        <link href="/css/meuestilo.css" rel="stylesheet"/>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
     </head>
     <body class="sb-nav-fixed">
@@ -78,7 +78,7 @@
                         <div class="card mb-4">
                             <div class="card-header">
                                 <i class="fas fa-table me-1"></i>
-                               Tabela Clientes
+                               Tabela 
                             </div>
                             <div class="card-body">
                                 <table id="datatablesSimple">
@@ -101,7 +101,32 @@
 											<td th:text="${clientes.telefone}" class="column4"></td>
 											<td th:text="${clientes.nascimento}" class="column5"></td>
 											<td class="column6"><a th:href="@{'/clientes/editar/'+${clientes.id}}" class="button green" ><span><i class="fa fa-edit"></i></span></a>
-											<a th:href="@{'/clientes/excluir/'+${clientes.id}}" class="button red"><span><i class="fa fa-trash"></i></span></a></td>
+											<a th:href="@{'/clientes/excluir/'+${clientes.id}}"
+											class="button red" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><span><i class="fa fa-trash"></i></span></a>
+											
+											<!-- Modal -->
+											<div class="modal fade" id="staticBackdrop"
+												data-bs-backdrop="static" data-bs-keyboard="false"
+												tabindex="-1" aria-labelledby="staticBackdropLabel"
+												aria-hidden="true">
+												<div class="modal-dialog">
+													<div class="modal-content">
+														<div class="modal-header">
+															<h5 class="modal-title" id="staticBackdropLabel">Excluir Cliente</h5>
+															<button type="button" class="btn-close"
+																data-bs-dismiss="modal" aria-label="Close"></button>
+														</div>
+														<div class="modal-body">Deseja realmente excluir o cliente?</div>
+														<div class="modal-footer">
+															<button type="button" class="btn btn-secondary"
+																data-bs-dismiss="modal">Fechar</button>
+															<a type="button" class="btn btn-outline"
+															th:href="@{/clientes/excluir/{id}(id=${clientes.id})}"><i
+															class="fa fa-check"></i>&nbsp;Exclua</a>
+														</div>
+													</div>
+												</div>
+											</div>
 											<td class="column7"></td>
 										</tr>
                                     </tbody>
@@ -111,13 +136,34 @@
                     </div>
                 </main>
                 <footer class="py-4 bg-light mt-auto">
-                    <div class="container-fluid px-4">
-                        <div class="d-flex align-items-center justify-content-between small">
-                            <div class="text-muted">Livraria Novo Olhar</div>
-                          
-                        </div>
-                    </div>
-                </footer>
+				<div class="container-fluid px-4">
+					<div class="d-flex align-items-right right-content-between small">
+						<div class="text-muted">Redes Sociais</div>
+						<ul>
+							<li class="redes_sociais"><a
+								href="https://www.facebook.com/" title="Facebook"><img
+									src="/images/logo-facebook.PNG" /></a></li>
+							<li class="redes_sociais"><a href="https://www.youtube.com/"
+								title="Youtube"><img src="/images/logo-youtube.PNG" /></a></li>
+							<li class="redes_sociais"><a href="https://www.twitter.com/"
+								title="Twitter"><img src="/images/logo-twitter.PNG" /></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="container-fluid px-4">
+					<div
+						class="d-flex align-items-center justify-content-between small">
+						<div class="text-muted">Livraria Novo Olhar - 2021. Todos os
+							direitos reservados</div>
+						<div class="text-muted">
+							<p>E-mail: livrarianovoolhar@livraria.com.br</p>
+						</div>
+						<div class="text-muted">
+							<p>Contato: (85) 99999-9999</p>
+						</div>
+					</div>
+				</div>
+			</footer>
             </div>
         </div>
        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>

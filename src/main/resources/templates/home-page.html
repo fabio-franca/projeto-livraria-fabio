@@ -50,14 +50,11 @@
           <li class="nav-item active">
             <a class="nav-link" aria-current="page" href="/home">Home</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
            <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="dropdown08" data-bs-toggle="dropdown" aria-expanded="false">Logins</a>
             <ul class="dropdown-menu" aria-labelledby="dropdown08">
-              <li><a class="dropdown-item" href="#">Clientes</a></li>
-              <li><a class="dropdown-item" href="#">Funcionários</a></li>
+              <li><a class="dropdown-item" href="/loginClientes">Clientes</a></li>
+              <li><a class="dropdown-item" href="/loginFuncionario">Funcionários</a></li>
           
             </ul>
           </li>
@@ -146,8 +143,8 @@
 
     <div class="row featurette">
       <div class="col-md-5 order-md-2">
-        <h2 class="featurette-heading" style="color: white;">Conheça nossos livros! <span class="text-muted">See for yourself.</span></h2>
-        <p class="lead">A livraria novo olhar oferece aos seus clientes uma diversidade de conteúdo. Em um ambiente relaxante e agradável e se ler.</p>
+        <h2 class="featurette-heading" style="color: white;">Ambiente climatizado e relaxante. <span class="text-muted"></span></h2>
+        <p class="lead">Oferecemos poltronas confortáveis e reclináveis, para uma viagem imersiva nos livros.</p>
       </div>
       <div class="col-md-5 order-md-1">
          <img src="/images/marketing1.PNG"/>
@@ -158,7 +155,7 @@
   <!-- --------------------LIVROS---------------------------- -->
   	<article class="my-3" id="card">
       <div class="bd-heading sticky-md-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
-        <h3 class="h3colecao">Nossa coleção!</h3>
+        <h3 class="h3colecao">Os mais comprados!</h3>
       </div>
 		<br>
       <div>
@@ -171,15 +168,10 @@
 					<img src="/images/capa-livro2.PNG" width="195" height="250"/>
                 </div>
                 <div class="col-sm-6 ">
-                  <div class="card-body" th:each="livro: ${livros}">
-                  	<h5 class="card-title">Título</h5>
-                  		<p th:text="${livro.titulo}"></p>
-                  	<h5 class="card-title">Autor</h5>
-                  		<p th:text="${livro.autor}"></p>
-                    <h5 class="card-title">Preço</h5>
-                    <p th:text="${livro.preco}"></p>
-                    <p class="card-text">Conta sobre a vida e seus mistérios.</p>
-                 
+                  <div class="card-body">
+                  <h4 class="card-title">Livro digital e bibliotecas</h4>
+                  	 <p class="card-text">Informações sobre livros digitais e bibliotecas em geral. Aprenda mais sobre a área.</p>
+                  	 <p class="text-muted">R$25,99</p>
                   </div>
                 </div>
               </div>
@@ -192,50 +184,78 @@
 					<img src="/images/capa-livro1.PNG" width="195" height="250"/>
                 </div>
                 <div class="col-sm-6">
-                  <div class="card-body" th:each="livro: ${livros}">
-                  	<h5 class="card-title">Título</h5>
-                  		<p th:text="${livro.titulo}"></p>
-                  	<h5 class="card-title">Autor</h5>
-                  		<p th:text="${livro.autor}"></p>
-                    <h5 class="card-title">Preço</h5>
-                    <p th:text="${livro.preco}"></p>
-                    <p class="card-text">Conta sobre a vida e seus mistérios.</p>
-                 
+                  <div class="card-body">
+                  		<h4 class="card-title">A ascenção do dragão</h4>
+                    <p class="card-text">A fascinante vida de um dragão em fatos reais, na idade média. Não perca!</p>
+                 	 <p class="text-muted">R$99,99</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
- 
-        </div>
+         </div>
         </div>
       </div>
     </article>
  
-  <div class="container">
-  	<div class="card"><h3>Confira nossos sucessos</h3>
+  <div id="card-livros" class="container">
+  	<div class="card"><h4>Confira nossos sucessos</h4>
   		<table>
   			<thead>
-  				 <tr class="table100-head">
+  				 <tr id="col-especial" class="table100-head">
   				 		<th class="column1"><span></span></th>
-						<th class="column2"><span>Título</span></th>
-						<th class="column3"><span>Autor</span></th>
+  				 		<th class="column2"><span>Referência</span></th>
+						<th class="column3"><span>Título</span></th>
+						<th class="column4"><span>Autor</span></th>
 						<th class="column5"><span>Preço</span></th>
-						<th class="column5"><span>Adicionar ao carrinho</span></th>
+						<th class="column6"><span>Carrinho</span></th>
 					  </tr>
   			</thead>
   			<tr th:each="livro: ${livros}">
-  				<td><img src="/images/capa-livro2.PNG" width="90" height="150"/></td>
+  				<td><img src="/images/capa-livro2.PNG" width="70" height="130"/></td>
+  				<td th:text="${livro.id}" class="column1"></td>
 				<td th:text="${livro.titulo}" class="column2"></td>
 				<td th:text="${livro.autor}" class="column3"></td>
-				<td th:text="${livro.preco}" class="column5 js-decimal"></td>
-				<td class="column6"><a class="button green" ><span><i class="fa fa-edit"></i></span></a></td>
+				<td th:text="${livro.preco}" class="column5"></td>
+				<td class="column6">  <button type="button" class="btn btn-success">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart4" viewBox="0 0 16 16">
+  				<path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l.5 2H5V5H3.14zM6 5v2h2V5H6zm3 0v2h2V5H9zm3 0v2h1.36l.5-2H12zm1.11 3H12v2h.61l.5-2zM11 8H9v2h2V8zM8 8H6v2h2V8zM5 8H3.89l.5 2H5V8zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"/>
+				</svg></button></td>
 			</tr>
 		</table>
+  	</div>
   </div>
-  </div>
-  <!-- -------------SCRIPTS----- -->
+  <br>
+  <br>
+	<footer class="py-4 bg-light mt-auto">
+		<div class="container-fluid px-4">
+			<div class="d-flex align-items-right right-content-between small">
+				<div class="text-muted">Redes Sociais</div>
+				<ul>
+					<li class="redes_sociais"><a href="https://www.facebook.com/"
+						title="Facebook"><img src="/images/logo-facebook.PNG" /></a></li>
+					<li class="redes_sociais"><a href="https://www.youtube.com/"
+						title="Youtube"><img src="/images/logo-youtube.PNG" /></a></li>
+					<li class="redes_sociais"><a href="https://www.twitter.com/"
+						title="Twitter"><img src="/images/logo-twitter.PNG" /></a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="container-fluid px-4">
+			<div class="d-flex align-items-center justify-content-between small">
+				<div class="text-muted">Livraria Novo Olhar - 2021. Todos os
+					direitos reservados</div>
+				<div class="text-muted">
+					<p>E-mail: livrarianovoolhar@livraria.com.br</p>
+				</div>
+				<div class="text-muted">
+					<p>Contato: (85) 99999-9999</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- -------------SCRIPTS----- -->
      <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-     <script src="js/utilidades.js"></script>
+     <!--  <script src="js/utilidades.js"></script>-->
 </body>
 </html>
