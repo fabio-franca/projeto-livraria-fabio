@@ -7,6 +7,8 @@ Já para o administrador e funcionários, foi criado um sistema de gerenciamento
 
 Modelo utilizado: MVC.
 
+Observação: Foi criado um arquivo "criar_banco_e_tabelas_livraria.sql", para criar a base de dados e as suas respectivas tabelas com inserts.
+
 <hr>
 
 Home-page:  http://localhost:8080/home
