@@ -1,4 +1,6 @@
-<html lang="pt-BR">
+<html lang="pt-BR"
+xmlns:th="http://www.thymeleaf.org"
+xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 <head>
 <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -79,9 +81,9 @@
 							aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
 							<nav class="sb-sidenav-menu-nested nav accordion"
 								id="sidenavAccordionPages">
-								<a class="nav-link" href="/livros/listar">1. Lista de Livros</a> 
+								<a class="nav-link" href="/livro/lista">1. Lista de Livros</a> 
 								<a class="nav-link" href="/funcionarios/listar">2. Lista de Funcionários</a> 
-								<a class="nav-link" href="/clientes/listar">3. Lista de Clientes</a>
+								<a class="nav-link" href="/clientes/listar">3.Lista de Clientes</a>
 								<a class="nav-link" href="/vendas/listar">4.Lista de Vendas</a>
 							</nav>
 						</div>
@@ -97,7 +99,7 @@
 		<div id="layoutSidenav_content">
 			<main>
 			<div class="container-fluid px-4">
-				<h1 class="mt-4">Lista de Funcionários</h1>
+				<h1 class="mt-4">Lista de Vendas</h1>
 
 
 				<div class="card mb-4">
@@ -108,30 +110,47 @@
 						<table id="datatablesSimple">
 							<thead>
 								<tr>
-									<th class="column1"><span>Id</span></th>
-									<th class="column2"><span>Nome</span></th>
-									<th class="column3"><span>E-mail</span></th>
-									<th class="column4"><span>Nascimento</span></th>
-									<th class="column5"><span>Cargo</span></th>
+									<th class="column1"><span>Venda</span></th>
+									<th class="column2"><span>Cliente</span></th>
+									<th class="column3"><span>Livro</span></th>
 									<th class="column6"><span>Ações</span></th>
 								</tr>
 							</thead>
 
 							<tbody>
-								<tr th:each="funcionarios: ${listaFuncionarios}">
-									<td th:text="${funcionarios.id}" class="column1"></td>
-									<td th:text="${funcionarios.nome}" class="column2"></td>
-									<td th:text="${funcionarios.email}" class="column3"></td>
-									<td th:text="${funcionarios.nascimento}" class="column4"></td>
-									<td th:text="${funcionarios.cargo}" class="column5"></td>
-									<td class="column6">
-									<!-- Editar -->
-									<a th:href="@{'/funcionarios/editar/'+${funcionarios.id}}" class="button green">
-									<span><i class="fa fa-edit"></i></span></a>
+								<tr th:each="vendas: ${listaVendas}">
+									<td th:text="${vendas.id}" class="column1"></td>
+									<td th:text="${vendas.clientes.nome}" class="column2"></td>
+									<td th:text="${vendas.livro.titulo}" class="column3"></td>
+									<!-- <td class="column6"><a
+										th:href="@{'/funcionarios/editar/'+${funcionarios.id}}"
+										class="button green"><span><i class="fa fa-edit"></i></span></a>
+										<a th:href="@{'/funcionarios/excluir/'+${funcionarios.id}}"
+										class="button red" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><span><i class="fa fa-trash"></i></span></a>
+
 									
-									<!-- Excluir -->
-									<a th:href="@{'/funcionarios/excluir/'+${funcionarios.id}}" class="button red">
-									<span><i class="fa fa-trash"></i></span></a>
+									<div class="modal fade" id="staticBackdrop"
+										data-bs-backdrop="static" data-bs-keyboard="false"
+										tabindex="-1" aria-labelledby="staticBackdropLabel"
+										aria-hidden="true">
+										<div class="modal-dialog">
+											<div class="modal-content">
+												<div class="modal-header">
+													<h5 class="modal-title" id="staticBackdropLabel">Excluir Funcionário</h5>
+													<button type="button" class="btn-close"
+														data-bs-dismiss="modal" aria-label="Close"></button>
+												</div>
+												<div class="modal-body">Deseja realmente excluir o funcionário?</div>
+												<div class="modal-footer">
+													<button type="button" class="btn btn-secondary"
+														data-bs-dismiss="modal">Fechar</button>
+													<a type="button" class="btn btn-outline"
+													th:href="@{/funcionarios/excluir/{id}(id=${funcionarios.id})}"><i
+													class="fa fa-check"></i>&nbsp;Exclua</a>
+												</div>
+											</div>
+										</div>
+									</div> -->
 									<td class="column7"></td>
 								</tr>
 							</tbody>
@@ -185,7 +204,7 @@
 	<script src="/js/jquery/jquery-3.2.1.min.js"></script>
 	<script src="/js/jquery/jquery.mask.min.js"></script>
 	<script src="/js/jquery/jquery.maskMoney.min.js"></script>
-	<!-- <script src="/js/utilidades.js"></script> -->
+	<script src="/js/utilidades.js"></script>
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 	<script
 		src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"

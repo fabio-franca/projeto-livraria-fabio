@@ -28,7 +28,7 @@ public class FuncionariosController {
 	
 	
 	//Cadastro
-	@RequestMapping("/funcionarios")
+	@RequestMapping("/cadastro/funcionarios")
 	public ModelAndView cadastrar(@Valid Funcionarios funcionarios, BindingResult result) {
 		ModelAndView mv = new ModelAndView("/funcionarios/cadastroFuncionarios");
 		mv.addObject("cargo", Cargo.values());
@@ -40,7 +40,7 @@ public class FuncionariosController {
 	//Salvar
 	@PostMapping("/salvarFuncionario")
 	public ModelAndView salvar(@Valid Funcionarios funcionarios, BindingResult result, RedirectAttributes attributes) {
-		ModelAndView mv = new ModelAndView("redirect:/funcionarios");
+		ModelAndView mv = new ModelAndView("redirect:/cadastro/funcionarios");
 		servico.adicionar(funcionarios);
 		
 		attributes.addFlashAttribute("mensagem", "Funcionario salvo com sucesso!");
@@ -79,5 +79,25 @@ public class FuncionariosController {
 	}
 	
 	
-
+	/***********************FUNCIONÁRIO EXTRA CADASTRO*******************************/
+	
+	//Cadastro
+	@RequestMapping("/cadastro/funcionarios/extra")
+	public ModelAndView cadastrarExtra(@Valid Funcionarios funcionarios, BindingResult result) {
+		ModelAndView mv = new ModelAndView("/funcionarios/cadastroFuncionariosExtra");
+		mv.addObject("cargo", Cargo.values());
+		mv.addObject("funcionarios", funcionarios);
+		
+		return mv;
+	}
+	
+	//Salvar
+	@PostMapping("/salvarFuncionarioExtra")
+	public ModelAndView salvarExtra(@Valid Funcionarios funcionarios, BindingResult result, RedirectAttributes attributes) {
+		ModelAndView mv = new ModelAndView("redirect:/principal");
+		servico.adicionar(funcionarios);
+		
+		attributes.addFlashAttribute("mensagem", "Funcionario salvo com sucesso!");
+		return mv;
+	}
 }

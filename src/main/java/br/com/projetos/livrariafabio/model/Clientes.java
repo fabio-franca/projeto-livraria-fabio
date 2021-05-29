@@ -2,11 +2,13 @@ package br.com.projetos.livrariafabio.model;
 
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
@@ -31,6 +33,9 @@ public class Clientes implements Serializable {
 	private String usuario;
 	
 	private String senha;
+	
+	@OneToMany(mappedBy = "clientes")
+	private List<Vendas> vendas;
 	
 
 	public Long getId() {

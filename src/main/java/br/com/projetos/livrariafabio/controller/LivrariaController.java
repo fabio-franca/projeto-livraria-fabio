@@ -23,7 +23,7 @@ public class LivrariaController {
 	LivroService servico;
 	
 	//Consulta
-	@RequestMapping("/lista")
+	@RequestMapping("/livros/listar")
 	public String paginaInicial(Model model) {
 		
 		List<Livro> livros = servico.listarLivros();
@@ -33,7 +33,7 @@ public class LivrariaController {
 	}
 	
 	//Cadastro
-	@RequestMapping("/cadastro")
+	@RequestMapping("/cadastro/livro")
 	public String paginaCadastro(Model model) {
 		
 		Livro livro = new Livro();  //instância 
@@ -49,7 +49,7 @@ public class LivrariaController {
 		
 		servico.adicionar(livro);
 		attributes.addFlashAttribute("mensagem", "Livro salvo com sucesso!");
-		return "redirect:/cadastro";
+		return "redirect:/cadastro/livro";
 	}
 	
 	//Home
@@ -63,7 +63,7 @@ public class LivrariaController {
 	}
 	
 	//Editar
-	@RequestMapping("/editar/{id}")
+	@RequestMapping("/livro/editar/{id}")
 	public ModelAndView paginaEditar(@PathVariable(name="id") Long id) {
 		ModelAndView mv = new ModelAndView("livros/editarlivro");
 		
@@ -75,10 +75,10 @@ public class LivrariaController {
 	}
 	
 	//Deletar
-	@RequestMapping("/excluir/{id}")
+	@RequestMapping("/livro/excluir/{id}")
 	public String deletar(@PathVariable(name="id") Long id) {
 		servico.deletar(id);
 		
-		return ("redirect:/lista");
+		return ("redirect:/livros/listar");
 	}
 }

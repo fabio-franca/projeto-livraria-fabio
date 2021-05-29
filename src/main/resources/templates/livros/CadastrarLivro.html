@@ -1,6 +1,7 @@
 <html lang="pt-BR"
 xmlns:th="http://www.thymeleaf.org"
-	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -16,7 +17,7 @@ xmlns:th="http://www.thymeleaf.org"
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
             <!-- Navbar Brand-->
             <img src="/images/logo-livrarianovo.png" width="70px" height="70px"/>
-            <a class="navbar-brand ps-3" href="index.html">Livraria Novo olhar</a>
+            <a class="navbar-brand ps-3" href="/principal">Livraria Novo olhar</a>
             <!-- Sidebar Toggle-->
             <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
            
@@ -46,8 +47,8 @@ xmlns:th="http://www.thymeleaf.org"
                             </a>
                             <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="/cadastro">1. Cadastro de Livro</a>
-                                    <a class="nav-link" href="/funcionarios">2. Cadastro de Funcionário</a>
+                                    <a class="nav-link" href="/cadastro/livro">1. Cadastro de Livro</a>
+                                    <a class="nav-link" href="/cadastro/funcionarios">2. Cadastro de Funcionário</a>
                                 </nav>
                             </div>
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
@@ -57,9 +58,10 @@ xmlns:th="http://www.thymeleaf.org"
                             </a>
                             <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
-                                   	 <a class="nav-link" href="/lista">1. Lista de Livros</a>
+                                   	 <a class="nav-link" href="/livros/listar">1. Lista de Livros</a>
                                    	 <a class="nav-link" href="/funcionarios/listar">2. Lista de Funcionários</a>
                                		 <a class="nav-link" href="/clientes/listar">3. Lista de Clientes</a>
+                               		 <a class="nav-link" href="/vendas/listar">4.Lista de Vendas</a>
                                 </nav>
                             </div>
                             <div class="sb-sidenav-menu-heading">Configurações</div>                          
@@ -127,7 +129,7 @@ xmlns:th="http://www.thymeleaf.org"
 												<button type="submit" class="btn  btn-primary">Salvar</button>
 											</div>
 										<div class="form-group col-sm-2">
-											<a href="/lista"><button type="button" class="btn  btn-secondary">Cancelar</button></a>
+											<a href="/livros/listar"><button type="button" class="btn  btn-secondary">Cancelar</button></a>
 										</div>
 									</div>
                             </div>
