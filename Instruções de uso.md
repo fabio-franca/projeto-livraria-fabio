@@ -16,8 +16,9 @@ Em seu corpo, possui um carousel que exibe imagens, algumas frases de incentivo 
 
 Também possui rodapé com as redes sociais e informações da livraria.
 
+<hr>
 
-------SISTEMA DE GERENCIAMENTO------
+<strong>------SISTEMA DE GERENCIAMENTO------</strong>
 
 -Login Funcionário:  http://localhost:8080/login/funcionario
 
@@ -51,8 +52,9 @@ Listagem contendo todos os funcionários cadastrados. Na coluna "Ações", é po
 
 Listagem contendo todos os clientes cadastrados. Na coluna "Ações", é possível clicar no botão "Editar" para editar ou no botão "Excluir" para remover um registro.
 
+<hr>
 
------------UTILIZAÇÃO CLIENTE----------------
+<strong>-----------UTILIZAÇÃO CLIENTE----------------</strong>
 
 -Login Cliente: http://localhost:8080/loginClientes
 
@@ -60,11 +62,11 @@ Na home-page, no menu superior, clicando em "Logins" e após "Clientes", é poss
 
 -Cadastro Cliente: http://localhost:8080/clientes/cadastroClientes
 
-Após preencher os dados de cadastro, clicar em salvar. O usuário será redirecionado a home-page para que possa realizar suas compras. Clicar no carrinho de compras para ir para a página de vendas.
+Após preencher os dados de cadastro, clicar em salvar. O usuário será redirecionado a home-page para que possa realizar suas compras. Clicar no carrinho de compras para ir a página de vendas.
 
 -Venda: http://localhost:8080/vendas/cadastroVendas
 
-No cadastro da venda é possível definir selecionar o cliente e o livro que deseja comprar.
+No cadastro da venda é possível selecionar o cliente e o livro que deseja comprar.
 
 -Lista de Vendas: http://localhost:8080/vendas/listar
 
