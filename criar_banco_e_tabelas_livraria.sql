@@ -1,4 +1,4 @@
-CREATE DATABASE livraria_fabio2;
+CREATE DATABASE livraria_fabio;
 
 USE livraria_fabio2;
 

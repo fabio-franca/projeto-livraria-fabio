@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
@@ -61,4 +62,26 @@ public class VendasController {
 				
 				return mv;
 			}
+			
+	//Editar
+			@RequestMapping("/vendas/editar/{id}")
+			public ModelAndView editar(@PathVariable(name="id") Long id) {
+				ModelAndView mv = new ModelAndView("/vendas/editarVendas");
+				
+				Vendas vendas = servico.modificar(id);
+				mv.addObject("listaVendas", repo.findAll());
+				mv.addObject("vendas", vendas);
+				
+				return mv;
+			}
+	
+	//Deletar
+			@RequestMapping("/vendas/excluir/{id}")
+			public ModelAndView deletar(@PathVariable(name="id") Long id) {
+				ModelAndView mv = new ModelAndView("redirect:/vendas/listar");
+				servico.deletar(id);
+				
+				return mv;
+			}
+	
 }

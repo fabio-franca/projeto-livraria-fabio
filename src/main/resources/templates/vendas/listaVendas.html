@@ -84,7 +84,7 @@ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 								<a class="nav-link" href="/livro/lista">1. Lista de Livros</a> 
 								<a class="nav-link" href="/funcionarios/listar">2. Lista de Funcionários</a> 
 								<a class="nav-link" href="/clientes/listar">3.Lista de Clientes</a>
-								<a class="nav-link" href="/vendas/listar">4.Lista de Vendas</a>
+								<a class="nav-link" href="/vendas/listar">4. Lista de Vendas</a>
 							</nav>
 						</div>
 						<div class="sb-sidenav-menu-heading">Configurações</div>
@@ -122,6 +122,16 @@ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 									<td th:text="${vendas.id}" class="column1"></td>
 									<td th:text="${vendas.clientes.nome}" class="column2"></td>
 									<td th:text="${vendas.livro.titulo}" class="column3"></td>
+									<td class="column4">
+										<!-- Editar -->
+										<a th:href="@{'/vendas/editar/'+${vendas.id}}" class="button green" ><span><i class="fa fa-edit"></i></span></a>
+										
+										<!-- Excluir -->
+										<a th:href="@{'/vendas/excluir/'+${vendas.id}}" class="button red">
+										<span><i class="fa fa-trash"></i></span></a>
+										<td class="column7"></td>
+									
+									
 									<!-- <td class="column6"><a
 										th:href="@{'/funcionarios/editar/'+${funcionarios.id}}"
 										class="button green"><span><i class="fa fa-edit"></i></span></a>
@@ -151,7 +161,6 @@ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 											</div>
 										</div>
 									</div> -->
-									<td class="column7"></td>
 								</tr>
 							</tbody>
 						</table>
