@@ -7,7 +7,9 @@ Já para o administrador e funcionários, foi criado um sistema de gerenciamento
 
 Modelo utilizado: MVC.
 
-<strong>Observação:</strong> Foi criado um arquivo "criar_banco_e_tabelas_livraria.sql", para criar a base de dados e as suas respectivas tabelas com inserts.
+<strong>Observações:</strong> 
+1. Foi criado um arquivo "criar_banco_e_tabelas_livraria.sql", para criar a base de dados e as suas respectivas tabelas com inserts.
+2. Em cada tela de cadastro, o botão "Cancelar" é utilizado para voltar a sua tela de listagem.
 
 <hr>
 
