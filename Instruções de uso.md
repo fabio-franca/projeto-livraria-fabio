@@ -7,6 +7,11 @@ Já para o administrador e funcionários, foi criado um sistema de gerenciamento
 
 Modelo utilizado: MVC.
 
+<strong>Observações:</strong> 
+1. Foi criado um arquivo "criar_banco_e_tabelas_livraria.sql", para criar a base de dados e as suas respectivas tabelas com inserts.
+2. Em cada tela de cadastro, o botão "Cancelar" é utilizado para voltar a sua tela de listagem.
+3. No sistema de gerenciamento, utilizar o ícone do avatar, é possível clicar em sair para voltar a home-page.
+
 <hr>
 
 Home-page:  http://localhost:8080/home
